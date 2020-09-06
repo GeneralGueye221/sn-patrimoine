@@ -11,67 +11,80 @@ For further references please check HELP.md file
 ###Running
 Once the project imported run open your terminal in run this command
 
-```$xslt
+```
 mvn spring-boot:run
 ```
 
 ### WEB layer
+
+|Res verb   |Endpoint   |Description   |Status   |
+|---|---|---|---|
+|GET   |/api/v1/heritages   |List all heritages in system   |200, 401, 500 |
+|GET   |/api/v1/heritages/:id   |Retrieves a heritage   |200, 401, 404   |
+|POST  |/api/v1/heritages   |   |   |
+|PUT   |/api/v1/heritages   |   |   |
+|DELETE   |/api/v1/heritages   |   |   |
+
+
+### Examples
 ####GET all Heritages
 
-```$xslt
-http://localhost:8080/api/heritages
+```
+curl -X GET http://localhost:8080/api/heritages?category=Building,Status
 ```
 
 ####GET one Heritage
 
-```$xslt
+```
 http://localhost:8080/api/heritage/{id}
 ```
 
 
 ####POST Heritage
 
-```$xslt
-http://localhost:8080/api/heritage
+```
+curl -X POST \
+    -- data ...
+    --url http://localhost:8080/api/heritage
 ```
 
 ####PUT one Heritage
 
-```$xslt
+```
 http://localhost:8080/api/heritage/{id}
 ```
 ####Delete one Heritage
 
-```$xslt
+```
 http://localhost:8080/api/heritage/{id}
 ```
 
 ####GET all Categories
 
-```$xslt
+```
 http://localhost:8080/api/heritages
 ```
 
 ####GET one Category
 
-```$xslt
+```
 http://localhost:8080/api/heritage/{id}
 ```
 
 
 ####POST Category
 
-```$xslt
+```
 http://localhost:8080/api/heritage
 ```
 
 ####PUT one Category
-```$xslt
+```
 http://localhost:8080/api/heritage/{id}
 ```
 ####Delete one Category
 
-```$xslt
+```
 http://localhost:8080/api/heritage/{id}
 ```
 
